@@ -5,7 +5,7 @@ import numpy as np
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
 
-print("Connection returned result: "+str(rc))
+  print("Connection returned result: "+str(rc))
 
 # Subscribing in on_connect() means that if we lose the connection and
 # reconnect then subscriptions will be renewed.
