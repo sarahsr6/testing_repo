@@ -1,3 +1,5 @@
+#suscriber will recieve info and keep listening forever... have main py listen
+
 import paho.mqtt.client as mqtt
 # 0. define callbacks - functions that run when events happen.
 # The callback for when the client receives a CONNACK response from the server.
