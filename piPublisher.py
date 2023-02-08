@@ -13,7 +13,7 @@ def on_connect(client, userdata, flags, rc):
 # reconnect then subscriptions will be renewed.
 # client.subscribe("ece180d/test")
 
-newVar = 6
+newVar = 6.0
 
 # The callback of the client when it disconnects.
 def on_disconnect(client, userdata, rc):
@@ -25,8 +25,7 @@ def on_disconnect(client, userdata, rc):
 # The default message callback.
 # (won’t be used if only publishing, but can still exist)
 def on_message(client, userdata, message):
-  print('Received message: "' + str(message.payload) + '" on topic "' +
-    message.topic + '" with QoS ' + str(message.qos))
+  print('Received message: "' + str(message.payload) )
         
 # 1. create a client instance.
 client = mqtt.Client()
@@ -47,7 +46,7 @@ client.loop_start()
 
 # 5. use publish() to publish messages to the broker.
 # payload must be a string, bytearray, int, float or None.
-for i in range(10):
+for i in range(5):
   client.publish('ece180d/test', newVar, qos=1)
 
 # 6. use disconnect() to disconnect from the broker.
