@@ -1,3 +1,5 @@
+#publisher will publish info... sends data then ends loop
+
 import paho.mqtt.client as mqtt
 import numpy as np
 
